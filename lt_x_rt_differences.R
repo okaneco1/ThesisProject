@@ -38,7 +38,7 @@ rt_seq_num_list
 ##### distance matrix ####
 
 #create full matrix
-dist.matrix <- dist.dna(all.seqs,model="N", as.matrix=TRUE)
+dist.matrix <- dist.dna(all.seqs,model="N", as.matrix=TRUE, pairwise.deletion = TRUE)
 View(dist.matrix)
 
 #just rt and lt
@@ -49,8 +49,8 @@ View(dist.matrix[147:148,134:136])
 
 all.seqs
 #all sequences of length: 156
-(1/156)*100 #0.64% difference
-(2/156)*100 #1.28% difference
+(3/156)*100 #1.92% difference
+(4/156)*100 #2.56% difference
 
 #depends on the strain whether there is enough difference between the two. 
 
